@@ -1,0 +1,22 @@
+.div {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  background: #212529;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  position: relative;
+  width: 100%;
+  overflow-y: auto;
+}
+@media (min-width: 520px) {
+  .main {
+    height: 90vh;
+    width: 520px;
+  }
+}

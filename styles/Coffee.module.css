@@ -1,0 +1,42 @@
+.div {
+  padding-right: 10px;
+}
+
+.article {
+  border-bottom: 1px solid #292d31;
+  display: flex;
+  padding: 10px 15px;
+}
+
+.article h4 {
+  line-height: 1.3125;
+  margin: 0;
+  font-weight: 100;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+}
+
+.article a {
+  line-height: 1.3125;
+  margin: 0;
+  color: #ccc;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.article a:hover {
+  text-decoration: underline;
+}
+
+.article:hover {
+  background: #25282b;
+  cursor: pointer;
+}
+
+.img {
+  border-radius: 10px;
+  height: auto;
+  width: 100%;
+  margin-top: 10px;
+}
