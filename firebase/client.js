@@ -4,6 +4,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyC8BN6keF_E8KFNBolBnR4B2aPXGAxuoc4",
   authDomain: "coffe-time-f480c.firebaseapp.com",
   projectId: "coffe-time-f480c",
+  databaseURL: "https://coffe-time-f480c.firebaseio.com",
   storageBucket: "coffe-time-f480c.appspot.com",
   messagingSenderId: "80768056515",
   appId: "1:80768056515:web:d3757933b7aba737f07676",
