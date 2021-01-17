@@ -36,7 +36,7 @@ export default function CoffeePage(props) {
 
 export async function getStaticPaths() {
   return {
-    paths: [{ params: { id: "HGRIzSC2z7QOsJAwJDbc" } }],
+    paths: [{ params: { id: "5n0jrsT6ce5l8pFdJEHi" } }],
     fallback: true,
   };
 }
