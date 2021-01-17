@@ -5,6 +5,7 @@ import useTimaAgo from "../../hooks/useTimeAgo";
 import useDateTimeFormat from "../../hooks/useDateTimeFormat";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import ButtonsIcons from "../ButtonsIcons";
 
 const Coffee = ({ avatar, userName, content, id, createdAt, img }) => {
   const timeago = useTimaAgo(createdAt);
@@ -36,6 +37,9 @@ const Coffee = ({ avatar, userName, content, id, createdAt, img }) => {
           {img && <img src={img} className={styles.img} />}
         </section>
       </article>
+      <div className={styles.buttons_icons}>
+        <ButtonsIcons />
+      </div>
     </div>
   );
 };

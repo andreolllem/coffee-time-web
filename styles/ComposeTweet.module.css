@@ -1,30 +1,15 @@
 .header {
-  align-items: center;
   display: flex;
-  height: 49px;
-  position: sticky;
+  justify-content: space-between;
+  height: 100%;
   top: 0;
   border-bottom: 1px solid #212529;
   width: 100%;
   background: #212529;
-  border-bottom: 1px solid #3b1c05;
 }
 
 .header h2 {
-  font-size: 21px;
-  font-weight: 800;
-  padding-left: 15px;
-  color: #d2691e;
-}
-
-.form_container {
-  align-items: flex-start;
-  display: flex;
-}
-
-.avatar_container {
-  padding-top: 20px;
-  padding-left: 10px;
+  color: chocolate;
 }
 
 .remove_img {
@@ -46,11 +31,33 @@
   border-radius: 10px;
   padding: 15;
   resize: none;
-  min-width: 115%;
+  min-width: 50%;
   outline: 0;
-  min-height: 200px;
+  min-height: 100px;
   background: #212529;
   color: #ffff;
+  overflow-y: scroll;
+  margin-left: 10px;
+}
+
+.textarea_avatar {
+  display: flex;
+}
+
+.linha {
+  border-top: 1px solid #393a3b;
+  margin-bottom: 10px;
+  margin-left: 20%;
+}
+
+.linha_one {
+  border-top: 1px solid #393a3b;
+  margin-bottom: 10px;
+}
+
+.camera {
+  margin-top: 5px;
+  margin-left: 20%;
 }
 
 .section {
@@ -64,8 +71,9 @@
   width: 100%;
 }
 
-.btn {
-  padding: 15px;
+.btn_inicio {
+  display: flex;
+  justify-content: space-between;
 }
 
 .remove_img button {
@@ -81,4 +89,9 @@
   right: 15px;
   cursor: pointer;
   border-top: #3b1c05;
+}
+
+.arrow {
+  margin-top: 5px;
+  margin-left: 10px;
 }

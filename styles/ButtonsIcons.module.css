@@ -1,0 +1,15 @@
+.like {
+  display: flex;
+
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.like p {
+  margin: 2px 0 0 5px;
+  float: right;
+  font-size: 14px;
+}
+.like span {
+  padding-right: 50px;
+}

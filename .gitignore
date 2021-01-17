@@ -11,6 +11,7 @@
 # next.js
 /.next/
 /out/
+/.cert/
 
 # production
 /build
@@ -32,3 +33,5 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+conta_de_service.json

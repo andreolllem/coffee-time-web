@@ -29,19 +29,24 @@ const HomePage = () => {
         <title>Home - Coffee-Time</title>
       </Head>
       <header className={styles.header}>
+        <Link href={"/"}>
+          <a>
+            <h2>Coffee-Time</h2>
+          </a>
+        </Link>
+
         {user && (
           <div className={styles.avatar}>
             <AvatarHeader src={user.avatar} />
           </div>
         )}
-        <Link href={"/"}>
-          <a>
-            <h2>Inicio</h2>
-          </a>
-        </Link>
       </header>
 
       <section className={styles.section}>
+        <button className={styles.btn_create}>
+          <Create width={40} height={45} stroke="#fff" />
+        </button>
+
         {timeline.map(
           ({ createdAt, id, userName, avatar, content, userId, img }) => (
             <Coffee
@@ -57,7 +62,6 @@ const HomePage = () => {
           )
         )}
       </section>
-
       <nav className={styles.nav}>
         <Link href="/home">
           <a>

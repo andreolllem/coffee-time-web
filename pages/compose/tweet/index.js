@@ -7,6 +7,8 @@ import Avatar from "../../../components/Avatar";
 
 import { addCoffee, uploadImage } from "../../../firebase/client";
 import Link from "next/link";
+import ArrowLeft from "../../../components/Icons/ArrowLeft";
+import Camera from "../../../components/Icons/Camera";
 
 const COMPOSE_STATE = {
   USER_NOT_KNOWN: 0,
@@ -47,8 +49,8 @@ export default function ComposeTweet() {
     }
   }, [task]);
 
-  const handleChange = (e) => {
-    const { value } = e.target;
+  const handleChangeDrag = (event) => {
+    const { value } = event.target;
     setMessage(value);
   };
 
@@ -88,48 +90,72 @@ export default function ComposeTweet() {
     const task = uploadImage(file);
     setTask(task);
   };
+
+  const handleChange = (e) => {
+    const file = e.target.files[0];
+    const task = uploadImage(file);
+    setTask(task);
+  };
+
   const isButtonDisabled = !message.length || status === COMPOSE_STATE.LOADING;
 
   return (
     <div>
-      <header className={styles.header}>
-        <Link href={"/"}>
-          <a>
-            <h2>Inicio</h2>
-          </a>
-        </Link>
-      </header>
       <section className={styles.form_container}>
-        {user && (
-          <section className={styles.avatar_container}>
-            <Avatar src={user.avatar} />
-          </section>
-        )}
         <form className={styles.form} onSubmit={handleSubmit}>
-          <textarea
-            className={styles.textarea}
-            style={{
-              border: `${
-                drag === DRAG_IMAGE_STATES.DRAG_OVER
-                  ? "3px dashed #d2691e"
-                  : "3px solid transparent"
-              }`,
-            }}
-            onChange={handleChange}
-            placeholder="O há de novo?"
-            onDragEnter={handleDragEnter}
-            onDragLeave={handleDragLeave}
-            onDrop={handleDrop}
-          ></textarea>
+          <header className={styles.header}>
+            <Link href={"/home"}>
+              <a>
+                <ArrowLeft width={32} height={32} stroke="#d2691e" />
+              </a>
+            </Link>
+
+            <Button disabled={isButtonDisabled}>Postar</Button>
+          </header>
+          <div className={styles.linha_one}></div>
+          <div className={styles.textarea_avatar}>
+            {user && (
+              <section className={styles.avatar_container}>
+                <Avatar src={user.avatar} />
+              </section>
+            )}
+
+            <textarea
+              className={styles.textarea}
+              style={{
+                border: `${
+                  drag === DRAG_IMAGE_STATES.DRAG_OVER
+                    ? "3px dashed #d2691e"
+                    : "3px solid transparent"
+                }`,
+              }}
+              placeholder="Diz ai...!"
+              onDragEnter={handleDragEnter}
+              onDragLeave={handleDragLeave}
+              onDrop={handleDrop}
+              value={message}
+              onChange={handleChangeDrag}
+            ></textarea>
+          </div>
           {imgURL && (
             <section className={styles.remove_img}>
               <button onClick={() => setImgURL(null)}>X</button>
               <img src={imgURL} />
             </section>
           )}
-          <div className={styles.btn}>
-            <Button disabled={isButtonDisabled}>Postar</Button>
-          </div>
+
+          <div className={styles.linha}></div>
+          <label className={styles.camera}>
+            <a>
+              <Camera />
+              <input
+                style={{ display: "none" }}
+                type="file"
+                name="Enviar"
+                onChange={handleChange}
+              />
+            </a>
+          </label>
         </form>
       </section>
     </div>

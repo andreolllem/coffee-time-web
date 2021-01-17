@@ -1,0 +1,26 @@
+.header {
+  align-items: center;
+  display: flex;
+  height: 49px;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #212529;
+  width: 100%;
+  background: #212529;
+}
+
+.header h2 {
+  font-size: 21px;
+  font-weight: 800;
+  padding-left: 15px;
+  color: #d2691e;
+}
+
+.arrow {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.section {
+  background: #292e31;
+}

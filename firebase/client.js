@@ -13,7 +13,7 @@ const firebaseConfig = {
 
 !firebase.apps.length && firebase.initializeApp(firebaseConfig);
 
-const db = firebase.firestore();
+export const db = firebase.firestore();
 
 const mapUserFromFirebaseAuthToUser = (user) => {
   const { displayName, email, photoURL, uid } = user;
@@ -68,7 +68,7 @@ export const listenLatestCoffees = (callback) => {
   return db
     .collection("coffees")
     .orderBy("createdAt", "desc")
-    .limit(20)
+    .limit(40)
     .onSnapshot(({ docs }) => {
       const newCoffees = docs.map(mapCoffesFromFirebaseToCoffeeObject);
       callback(newCoffees);

@@ -7,13 +7,14 @@
   border-bottom: 1px solid #212529;
   width: 100%;
   background: #212529;
+  justify-content: space-between;
 }
 
 .header h2 {
   font-size: 21px;
-  font-weight: 800;
-  padding-left: 15px;
+  font-weight: 500;
   color: #d2691e;
+  margin-left: 15px;
 }
 
 .section {
@@ -58,6 +59,22 @@
   stroke: chocolate;
 }
 
-.header {
-  margin-left: 15px;
+.avatar {
+  padding-right: 30px;
+}
+
+.btn_create {
+  background: chocolate;
+  border-radius: 999%;
+  border: 1px solid #fff;
+  position: fixed;
+  left: 75%;
+  margin-top: 450px;
+}
+
+@media (min-width: 520px) {
+  .btn_create {
+    left: 65%;
+    margin-top: 500px;
+  }
 }
