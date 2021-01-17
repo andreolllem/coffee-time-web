@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Logo from "../components/Icons/Logo";
-import GitHub from "../components/Icons/GitHub";
+import Face from "../components/Icons/Face";
 import Button from "../components/Button/index";
 import { useRouter } from "next/router";
 
@@ -35,13 +35,13 @@ export default function Home() {
 
       <section className={styles.section}>
         <Logo width={150} height={150} />
-        <h1>Coffee Time</h1>
-        <h2>Have a good time</h2>
+        <h1>Coffee-Time</h1>
+        <h2>Have a coffee-time</h2>
         <div className={styles.btn}>
           {user === USER_STATES.NOT_LOGGED && (
             <Button onClick={handleClick}>
-              <GitHub fill="#fff" width={24} height={24} />
-              Login with GitHub
+              <Face fill="#fff" width={24} height={24} />
+              Login pelo Facebook
             </Button>
           )}
           {user && USER_STATES.NOT_KNOWN && <span>Loading... </span>}
