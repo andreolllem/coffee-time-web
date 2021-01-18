@@ -43,9 +43,13 @@ const HomePage = () => {
       </header>
 
       <section className={styles.section}>
-        <button className={styles.btn_create}>
-          <Create width={40} height={45} stroke="#fff" />
-        </button>
+        <Link href={"compose/tweet/"}>
+          <a>
+            <button className={styles.btn_create}>
+              <Create width={40} height={45} stroke="#fff" />
+            </button>
+          </a>
+        </Link>
 
         {timeline.map(
           ({ createdAt, id, userName, avatar, content, userId, img }) => (
