@@ -43,10 +43,10 @@ const HomePage = () => {
       </header>
 
       <section className={styles.section}>
-        <Link href={"compose/tweet/"}>
+        <Link href={"/compose/tweet/"}>
           <a>
             <button className={styles.btn_create}>
-              <Create width={40} height={45} stroke="#fff" />
+              <Create width={40} height={48} stroke="#fff" />
             </button>
           </a>
         </Link>

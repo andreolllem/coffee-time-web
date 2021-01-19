@@ -20,3 +20,9 @@
     width: 520px;
   }
 }
+
+@media (max-width: 800px) {
+  .logo {
+    display: none;
+  }
+}

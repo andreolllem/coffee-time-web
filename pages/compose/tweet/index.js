@@ -98,6 +98,7 @@ export default function ComposeTweet() {
   };
 
   const isButtonDisabled = !message.length || status === COMPOSE_STATE.LOADING;
+  const isButtonDisabledImg = !imgURL || status === COMPOSE_STATE.LOADING;
 
   return (
     <div>
@@ -109,8 +110,9 @@ export default function ComposeTweet() {
                 <ArrowLeft width={32} height={32} stroke="#d2691e" />
               </a>
             </Link>
-
-            <Button disabled={isButtonDisabled}>Postar</Button>
+            <Button disabled={(isButtonDisabled, isButtonDisabledImg)}>
+              Postar
+            </Button>
           </header>
           <div className={styles.linha_one}></div>
           <div className={styles.textarea_avatar}>
