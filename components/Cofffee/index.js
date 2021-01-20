@@ -21,11 +21,9 @@ const Coffee = ({ avatar, userName, content, id, createdAt, img }) => {
   return (
     <div>
       <article onClick={handleArticleClick} className={styles.article}>
-        <div className={styles.div}>
-          <Avatar src={avatar} alt={userName} />
-        </div>
         <section>
-          <header>
+          <header className={styles.header}>
+            <Avatar src={avatar} alt={userName} />
             <strong>{userName}</strong>
             <Link href={`/status/${id}`}>
               <a>
@@ -33,7 +31,9 @@ const Coffee = ({ avatar, userName, content, id, createdAt, img }) => {
               </a>
             </Link>
           </header>
-          <h4>{content}</h4>
+          <div className={styles.content}>
+            <h4>{content}</h4>
+          </div>
           {img && <img src={img} className={styles.img} />}
         </section>
       </article>

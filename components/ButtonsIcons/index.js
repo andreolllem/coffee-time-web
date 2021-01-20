@@ -1,7 +1,7 @@
 import styles from "../../styles/ButtonsIcons.module.css";
 import Heart from "../Icons/Heart";
 import Like from "../Icons/Like";
-import Reuse from "../Icons/Reuse";
+import Comments from "../Icons/Comments";
 
 const ButtonsIcons = () => {
   return (
@@ -12,7 +12,7 @@ const ButtonsIcons = () => {
           <Like width={20} height={20} stroke="#fff" />
         </span>
         <span>
-          <Reuse width={20} height={20} stroke="#fff" />
+          <Comments width={20} height={20} stroke="#fff" />
         </span>
         <span>
           <Heart width={20} height={20} stroke="#fff" />

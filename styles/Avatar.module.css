@@ -5,8 +5,8 @@
 
 .avatar {
   border-radius: 9999px;
-  width: 49px !important;
-  height: 49px !important;
+  width: 39px !important;
+  height: 39px !important;
 }
 
 .avatar + strong {
