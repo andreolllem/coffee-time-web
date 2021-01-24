@@ -1,0 +1,7 @@
+.like svg:hover {
+  stroke: #d2691e;
+}
+
+.like a {
+  padding-bottom: 10px;
+}

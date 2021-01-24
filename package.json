@@ -11,6 +11,7 @@
     "@uppy/core": "^1.15.0",
     "firebase": "^8.2.2",
     "firebase-admin": "^9.4.2",
+    "hex-to-css-filter": "^3.1.2",
     "next": "10.0.5",
     "next-pwa": "^5.0.4",
     "react": "17.0.1",

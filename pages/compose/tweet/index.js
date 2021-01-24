@@ -110,7 +110,7 @@ export default function ComposeTweet() {
                 <ArrowLeft width={32} height={32} stroke="#d2691e" />
               </a>
             </Link>
-            <Button disabled={(isButtonDisabled, isButtonDisabledImg)}>
+            <Button disabled={isButtonDisabledImg} disabled={isButtonDisabled}>
               Postar
             </Button>
           </header>

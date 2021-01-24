@@ -2,15 +2,16 @@ import * as React from "react";
 
 export default function Home(props) {
   return (
-    <svg height={21} viewBox="0 0 21 21" width={21} {...props}>
-      <g
-        fill="none"
-        fillRule="evenodd"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M3.5 14.5V7.236a2 2 0 011.106-1.789l5-2.5a2 2 0 011.788 0l5 2.5a2 2 0 011.106 1.79V14.5a2 2 0 01-2 2h-10a2 2 0 01-2-2zM7.5 10.5h6M10.5 13.5v-6" />
-      </g>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={16}
+      height={16}
+      fill="#d2691e"
+      className="prefix__bi prefix__bi-house-door-fill"
+      viewBox="0 0 16 16"
+      {...props}
+    >
+      <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 00.5.5h4a.5.5 0 00.5-.5v-7a.5.5 0 00-.146-.354L13 5.793V2.5a.5.5 0 00-.5-.5h-1a.5.5 0 00-.5.5v1.293L8.354 1.146a.5.5 0 00-.708 0l-6 6A.5.5 0 001.5 7.5v7a.5.5 0 00.5.5h4a.5.5 0 00.5-.5z" />
     </svg>
   );
 }

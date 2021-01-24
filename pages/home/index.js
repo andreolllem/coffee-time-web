@@ -29,7 +29,7 @@ const HomePage = () => {
         <title>Home - Coffee-Time</title>
       </Head>
       <header className={styles.header}>
-        <Link href={"/"}>
+        <Link href={"/home"}>
           <a>
             <h2>Coffee-Time</h2>
           </a>
@@ -52,7 +52,17 @@ const HomePage = () => {
         </Link>
 
         {timeline.map(
-          ({ createdAt, id, userName, avatar, content, userId, img }) => (
+          ({
+            createdAt,
+            id,
+            userName,
+            avatar,
+            content,
+            userId,
+            img,
+            likesCount,
+            sharedCount,
+          }) => (
             <Coffee
               avatar={avatar}
               createdAt={createdAt}
@@ -62,6 +72,8 @@ const HomePage = () => {
               content={content}
               userName={userName}
               userId={userId}
+              likesCount={likesCount}
+              sharedCount={sharedCount}
             />
           )
         )}
@@ -69,7 +81,7 @@ const HomePage = () => {
       <nav className={styles.nav}>
         <Link href="/home">
           <a>
-            <Home width={32} height={32} stroke="#d2691e" />
+            <Home width={32} height={32} />
           </a>
         </Link>
         <Link href="/search">

@@ -39,7 +39,15 @@ export const loginWithFacebook = () => {
   return firebase.auth().signInWithPopup(facebookProvider);
 };
 
-export const addCoffee = ({ avatar, userName, content, userId, img }) => {
+export const addCoffee = ({
+  avatar,
+  userName,
+  content,
+  userId,
+  img,
+  likesCount,
+  sharedCount,
+}) => {
   return db.collection("coffees").add({
     avatar,
     userName,
