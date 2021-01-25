@@ -81,7 +81,7 @@ const HomePage = () => {
       <nav className={styles.nav}>
         <Link href="/home">
           <a>
-            <Home width={32} height={32} />
+            <Home width={30} height={30} />
           </a>
         </Link>
         <Link href="/search">
